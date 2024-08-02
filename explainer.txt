@@ -4,3 +4,5 @@ When we use double equal sign (==) in javascript, it does something called auto-
     suppose we have two values 5 and '5.00', logically, this two objects are not the same as one is a string while the other is a number. But, when we compare then using double equals to, it will return "true" because it converts the two to the same type and then see if the values are the same.
 
 To remedy this kind of problem in javascript, that is why we use the triple equals to (===) operator to prevent auto conversion.
+
+Foot Note: comparison operators (<,>, =, !) have a lower priority than math operators (+,-,*,/).
