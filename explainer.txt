@@ -25,3 +25,19 @@ footnote: NaN = Not a Number; this happens when we try to do an invalid math ope
 
 a ternary operator is a shorthand if-else statement. it works as follows: if the first part is a true statement, then the result will be the statement that follows immendiately after the question mark. Else, the result is the statement after the colon.
 e.g: 1 > 0 ? 'this is true' : 'this is a false statement' 
+
+####### Object Orineted Programming ########
+
+to declare an object, we use the syntax:
+    const name = {
+        key: value,
+        key: value,
+        ...
+    };
+
+it is important to terminate it with a semicolon to signal the end of the object. To access this object we use:
+1. The dot notation eg name.key this will fetch the value of the amed object key. 
+2. The bracket notation e.g name['key']. The two method works the same way but the dot notation has a setback that makes the square notation handy in some situations. For example suppose our key name is hyphenated e.g my-key, if we try to access it using the dot notaion i.e
+    name.my-key
+you might run into an erro because javascript could attempt to perfom a mathematical operation on it. in this kind of sceario, the square notation is the best option to go with i.e
+    name['my-key']
