@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Lesson</title>
+</head>
+<body>
+    <script>
+        // Object
+        const user1 = {
+        name: 'Oluwatobiloba',
+        'user-ID': 187,
+        rating: {
+            stars: 4.5,
+            count: 87
+        }, 
+        fname: function my_func(){
+            console.log('hello world');
+        }
+    };
+
+    console.log(user1.rating.stars);
+
+    // JSON
+    const user2 = {
+        "name": "Oluwatobiloba",
+        "user-ID": 187,
+        "rating": {
+            "stars": 4.5,
+            "count": 87
+        }
+    };
+
+    // This turns a javascript object into a JSON string
+    console.log(JSON.stringify(user2));
+    const jsonUSER = JSON.stringify(user2);
+    console.log(typeof jsonUSER);
+
+    // This turns JSON into javascript object
+    const back2Object = JSON.parse(jsonUSER);
+    console.log(back2Object);
+    console.log(typeof back2Object);
+    </script>
+</body>
+</html>

@@ -81,3 +81,26 @@ with this example, we will realize that console.log is an example of object with
 
 
 ##### JSON ##########
+By simple/direct definition, json is an object notation that has a similatr javascript object syntax but with less features. one important place to start is that json has a strict double quote rule when declaring strings i.e unlike javascript that accepts both, json can only be written with double quote.
+
+furthermore, it alos supports every other things the js objects support except for functions i.e a function can not be written as a nested feature in the json syntax. however, most of the other features are supported.
+
+using the object example as above, here is an example from a json perspective:
+    const name = {
+        "key": "value",
+        "my-key": "value"
+        "rating": {
+            "stars": 4.5,
+            "count": 87
+        }
+    }; 
+
+###### JSON localStorage
+This is used to save a more permanent data using json. This is because when we use the json localstorage, it saves the data on  the machine for retriever at at a later call.
+
+the localStorage method uses the synthax:
+    localStorage.setItem(name, value)
+to retrieve the value saved in localStorage, we use:
+    localStorage.getItem(name)
+
+Note: localstorage only supports string value.
