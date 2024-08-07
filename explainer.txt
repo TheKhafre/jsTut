@@ -93,7 +93,20 @@ using the object example as above, here is an example from a json perspective:
             "stars": 4.5,
             "count": 87
         }
-    }; 
+    };  
+
+while dealing with objects, when we try to copy the content of an object key to a variable, if the variables have the same name, we simply destructure by wrapping it in a curly braces and say equal to the object name.
+
+here is an example: suppose we have an object called userID, with a key value as follows
+    const userID = {
+        name: 'oluwatobi'
+    };
+if we want to copy this name key inside the object to another outside variable also name, i.e
+    const name = userID.name;
+instead of writing it as above, we simply say:
+const { name } = userID;
+
+for multiple keys, we just separate with a comma
 
 ###### JSON localStorage
 This is used to save a more permanent data using json. This is because when we use the json localstorage, it saves the data on  the machine for retriever at at a later call.
@@ -104,3 +117,7 @@ to retrieve the value saved in localStorage, we use:
     localStorage.getItem(name)
 
 Note: localstorage only supports string value.
+
+######## Auto-Boxing Property of String in JS ####
+Javascript automatically boxes a string that it receives. As a result of this, we can perform other operations on the strings such as checking the string ength, changing the cases, and so on.
+e.g     hello.toUpperCase()
