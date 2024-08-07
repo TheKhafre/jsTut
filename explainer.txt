@@ -121,3 +121,16 @@ Note: localstorage only supports string value.
 ######## Auto-Boxing Property of String in JS ####
 Javascript automatically boxes a string that it receives. As a result of this, we can perform other operations on the strings such as checking the string ength, changing the cases, and so on.
 e.g     hello.toUpperCase()
+
+#### Document Object Model (DOM) ####
+The DOM is the most powerful built-in object in javascript. it contains some interesting methods that can manipulate the webpage and also change how we interact with the page. this is how we add interactivity to the webpage. 
+
+some interesting basic DOM methods include:
+    document.body //This gives us the control of the body
+    document.title // give control of the title
+
+    e.g document.title = 'Changed' 
+    this will change the page title to Changed.
+
+However, when we deal with the document.body, we need to undeerstand that this is a next level object i.e a nested object which mean there are also many other things we can do with the document.body, e.g we can change the entire body to "changed" by using the innerHTML of the body object as follows:
+    document.body.innerHTML = 'Changed'
