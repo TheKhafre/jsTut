@@ -41,3 +41,43 @@ it is important to terminate it with a semicolon to signal the end of the object
     name.my-key
 you might run into an erro because javascript could attempt to perfom a mathematical operation on it. in this kind of sceario, the square notation is the best option to go with i.e
     name['my-key']
+
+PS: We also need to use the square notation when using a key name that requires an hyphen when creating an object. e.g
+    const name = {
+        key: value,
+        ['my-key']: value
+    }
+without the square bracket, you might fall into an uncaught syntax error. But, a simple point to note here is that it wil also work without the sqaure bracket if we turn it to a string i.e
+    const name = {
+        key: value,
+        'my-key': value
+    }
+
+Furthermore, we can also add any kind of datatype inside an object such as int, string, boolean etc. but this does not remove objects as well. What this mean is that we also add another object inside an object known as nested object. e.g:
+    const name = {
+        key: value,
+        ['my-key']: value
+        rating: {
+            stars: 4.5,
+            count: 87
+        }
+    };
+and also functions as well. e.g:
+    const name = {
+        key: value,
+        ['my-key']: value
+        rating: {
+            stars: 4.5,
+            count: 87
+        } 
+        fname: function my_func(){
+            console.log('hello world');
+        }
+    };
+
+to call the function, we use the object name followed by the function name i.e:
+    name.fname();
+with this example, we will realize that console.log is an example of object with function as console is the name of the object while log is a function inside it. This kind of object-function relationship is known as an object.
+
+
+##### JSON ##########

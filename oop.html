@@ -9,7 +9,8 @@
     <script>
         const product = {
             name: 'Nike Air',
-            price: 3800
+            price: 3800,
+            ['delivery-time']: '3 days'
         };
 
         console.log(product);
@@ -18,6 +19,7 @@
         // Another way to access object properties
         console.log(product['price']);
         console.log(product['price'] + product.price * 0.1);
+        console.log(product['delivery-time']);
     </script>
 </body>
 </html>
