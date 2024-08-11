@@ -172,3 +172,5 @@ step 2: to make it easy to target, let's add specificity.
 step 3: after creating the paragraph, let's create a way to make it display the result but creating a query Selector that points to the paragraph and make it equals to the string we make before as a popup for displaying the result. NOTE: this has to be inside a backtick to make the parts works together.
 
 furthermore, we need to add the information about the score at the top so it can display the result when we open for the first time; below the function for the score area; and inside the score reset function so it can display immediately after we reset the score.
+
+note: all the response are added inside the gameMode Function since that where the response comes from once the game is in play.
