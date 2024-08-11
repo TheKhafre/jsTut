@@ -134,3 +134,15 @@ some interesting basic DOM methods include:
 
 However, when we deal with the document.body, we need to undeerstand that this is a next level object i.e a nested object which mean there are also many other things we can do with the document.body, e.g we can change the entire body to "changed" by using the innerHTML of the body object as follows:
     document.body.innerHTML = 'Changed'
+
+The document.querySelector is one of the DOM process that helps us get an element from the HTML page and put inside the javascript. e.g. 
+	document.querySelector("button")
+This query selector will only selct the first button it finds on the page and add it as a js object. However, suppose we have more than one button and we want to select another button on the page, we can do this by adding a label such as a class or an id to target it more specifically. for example:
+	<button class="js-button"> Click me </button>
+	<script>
+		document.querySelector(".js-button");
+	</script>
+
+Basically, the DOM is the sit of manipulation and interactivity when working on a web project in JS.
+NOTE: All HTML element can have a innerHTML reference in javascript e.g: document.querySelector("button").innerHTML; This will select whatever is inside the button. for example, supposing the button is <button>hello</button>, if adding innerHTML to the query selector will give us Hello. Whereas, just selectin button element will give us the full tag like it is in the HTML i.e <button>hello</button>.
+
