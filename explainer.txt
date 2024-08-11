@@ -146,3 +146,16 @@ This query selector will only selct the first button it finds on the page and ad
 Basically, the DOM is the sit of manipulation and interactivity when working on a web project in JS.
 NOTE: All HTML element can have a innerHTML reference in javascript e.g: document.querySelector("button").innerHTML; This will select whatever is inside the button. for example, supposing the button is <button>hello</button>, if adding innerHTML to the query selector will give us Hello. Whereas, just selectin button element will give us the full tag like it is in the HTML i.e <button>hello</button>.
 
+#### DOM project 1(Subscribe button)######
+Let's develeop a small project that changes the youtube button to subscribed for new user when they click it and subscribe when they click it again. Here is a rundown of how that works:
+Step 1: create the button in HTML
+Step 2: add the onclick attribute to the HTML button
+step 3: inside the onclick attribute, let's create a variable to help us determine what happens and so we can use it again. the button needs to point to this button when created, but to be sure, let's add specificity by giving it a class name.
+step 4: let's create the variable and point it to the button using the document.querySelector.
+step 5: Next, let's use the variable to create a conditional statement that checks:
+    - if the innerHTML element of this button is subscribe, then it should change the .innerHTML to 'Subscribed'
+    - and if it was 'Subscribed', it should change to 'Subscribe'
+
+NOTE: make sure there is not space around the 'Subscribe' in the HTML button as this could create a bug that makes it look different to the JS conditional statement. However, if there is a space there add it too while checking the condtions. Another more starightforward solution will be to use .innerText while checking the conditions instead of innerHTML as this will only select the text and ignore everything else around it.
+
+To make this code clean, we can simply put it in a function and call the function in the the onclick attribute.
