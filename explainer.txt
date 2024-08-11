@@ -160,7 +160,7 @@ NOTE: make sure there is not space around the 'Subscribe' in the HTML button as 
 
 To make this code clean, we can simply put it in a function and call the function in the the onclick attribute.
 
-#### DOM project 1(Adding score update to RPS)######
+#### DOM project 2(Adding score update to RPS)######
 In this project, we will be updating the Rock, Paper, Scissor game with updated features that include:
     - the current scores
     - winners and losers
@@ -174,3 +174,31 @@ step 3: after creating the paragraph, let's create a way to make it display the 
 furthermore, we need to add the information about the score at the top so it can display the result when we open for the first time; below the function for the score area; and inside the score reset function so it can display immediately after we reset the score.
 
 note: all the response are added inside the gameMode Function since that where the response comes from once the game is in play.
+
+#### DOM project 3(Amazon Shipping Calculator)######
+In this project, we want to calculate the shipping fee for a given order using this format:
+    - if the order is less than $40, then we add a $10 shipping fee
+    - but if it's more than $40, it is feature
+
+Working with input opens up a new issue because unlike other elements that we've interacted with before, input element does not have an innerHTML. Hence, to select the element inside an input field, we use the .value i.e document.querySelector('input').value
+
+For this project, the steps are as follows:
+step 1: create the basic text for the project.
+step 2: create an input field and a button.
+step 3: add an onclick attribute to the button to perform the function of calculating when a user enters a value
+step 4: create a function that holds the logic for the transaction i.e:
+    - if the user enter less than $40, add $10 and return the result under the input field
+    - if the user enter more than $40, return the same amount under the input field
+    - else tell the user to enter a valid number.
+
+Here are some things to note about this task:
+    - we can create a variable to hold the value so it is easy to check the value with 40.
+    - since we will be adding 10 to this value, we need to create the variable with let instead of const
+    - the input will be returned as a string which will give wrong result, hence, to do math with it we need to convert it to a number by wrapping the input value in the Number method i.e Number(input.value).
+
+   We can make our input work with the press of the enter button by using the event.key attribute. The event attribute is an onkeydown attribute i.e instead of onclick, we can say onkeydown which listens for keypress event. to make our project respond to the Enter event, we can say:
+    onkeydown="
+        if(event.key === 'Enter'){
+            ...
+        } 
+    we can simply put what we want to happen between the if statement.
