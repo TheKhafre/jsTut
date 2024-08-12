@@ -201,4 +201,21 @@ Here are some things to note about this task:
         if(event.key === 'Enter'){
             ...
         } 
-    we can simply put what we want to happen between the if statement.
+we can simply put what we want to happen between the if statement.
+
+just like the Number method that we use to convert a string to an integer, we can also use the String method to convert an integer to a string. This follows the same pattern with the Number method i.e.:
+    String(varName) or simply, String(43);
+
+This will convert the integer into a string. However, there is an important point to note in JS that relates to type coersion, in that when we perform an operation on a string, if the string is entirely an integer (e.g '23'), javascript will automatically convert it to an integer and perform a mathematical operation on it. For example, 
+    console.log('34' - 14)
+Even though this is an operation involving two different datatypes, it will automatically convert the 34 to an integer and log 20 as a result on the console. However, this method is not advisable due to the shitty behavior of javascript because even though all other mathematical operation works fine with this method, addition will give a totally different result.
+
+if we try to do addition with the above example using the string and number together, we will get 3414. This is because, instead of add, it concatenates the two values.
+
+###### Working together (HTML, CSS, and Javascript)
+
+One important DOM feature to note when connecting CSS to HTML using javascript is the classList method. The classList is a method with additional features i.e it also has method inside it that we can use when using the class list method. one of those methods is the add() that we can use add a new class to an html document only in special circumstance. e.g taking a step back to the youtube subscribe button project we did, suppose we can to add a new class to our button when it is clicked, the process will be as follows:
+    buttonElement.classList.add('isSubscribed');
+This will add the new classList to the HTML document only when it clicked and it is on subscribed.
+The opposite of the .add() method is .remove().
+One last method form the classList is the .contains() which we can use to check if an HTML contains a named class or not.
