@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shipping Fee</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button{
+            color: white;
+            background-color: green;
+            padding: 12px 24px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .error-message{
+            color: red;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <p>Amazon Shipping Calculator</p>
@@ -18,27 +42,10 @@
     ">
     <button onclick="
         calCost();
-    ">calculate</button>
+    ">Calculate</button>
     <p class="totalOut"></p>
+    <p class="error-message"></p>
 
-    <script>
-        function keydownHandler(event){
-            if(event.key === 'Enter'){
-                calCost();
-            }
-        }
-
-        function calCost(){
-            const valueElement = document.querySelector('.inputJS');
-
-            let priceUpdate = Number(valueElement.value);
-
-            if(priceUpdate < 40){
-                priceUpdate = priceUpdate + 10;
-            }
-
-            document.querySelector('.totalOut').innerHTML = `$${priceUpdate}`
-        }
-    </script>
+    <script src="taxCalc.js"></script>
 </body>
 </html>
