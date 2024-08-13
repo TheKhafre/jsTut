@@ -214,7 +214,7 @@ if we try to do addition with the above example using the string and number toge
 
 ###### Working together (HTML, CSS, and Javascript)
 
-One important DOM feature to note when connecting CSS to HTML using javascript is the classList method. The classList is a method with additional features i.e it also has method inside it that we can use when using the class list method. one of those methods is the add() that we can use add a new class to an html document only in special circumstance. e.g taking a step back to the youtube subscribe button project we did, suppose we can to add a new class to our button when it is clicked, the process will be as follows:
+One important DOM feature to note when connecting CSS to HTML using javascript is the classList method. The classList is a method with additional features i.e it also has method inside it that we can use when using the class list method. one of those methods is the add() that we can use add a new class to an html document only in special circumstance. e.g taking a step back to the youtube subscribe button project we did, suppose we want to add a new class to our button when it is clicked, the process will be as follows:
     buttonElement.classList.add('isSubscribed');
 This will add the new classList to the HTML document only when it clicked and it is on subscribed.
 The opposite of the .add() method is .remove().
