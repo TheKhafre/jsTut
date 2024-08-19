@@ -219,3 +219,57 @@ One important DOM feature to note when connecting CSS to HTML using javascript i
 This will add the new classList to the HTML document only when it clicked and it is on subscribed.
 The opposite of the .add() method is .remove().
 One last method form the classList is the .contains() which we can use to check if an HTML contains a named class or not.
+
+____________________________________________________________________
+
+# Arrays and Loops
+Arrays are used to save multiple elements of different datatypes i.e we can use it to save score of students in a class, or name of students in a register. However, in the case of loops, it is used to repeat a single task multiple times until the condition for repeating it becomes false.
+
+## Arrays
+arrays are created using the square bracket (i.e []). We can have as much element as we want in an array. here is an example:
+    [2, 3, 9, 2, 0];
+but to make it make more sense, we can assign this array to a variable i.e 
+    const mrArr = [2, 3, 9, 2, 0];
+
+Using the computer specific indexing method, all array starts from the index 0 i.e the first element in the array occupies the location 0 in the array. Hence to access the first element in the array we use its index 0. Following our example above, here is an example of the way to access the third element in the array above:
+    myArr[2]
+by using the name of the array, we go into array and using 2, it takes us to the third element in the array.
+Using the same indexing, we can also change the value at any index in the array by simply saying it is now equals to the new value. e.g suppose we want to change the element at the first position in our array (myArr), we say:
+    myArr[0] = 48;
+
+Arrays can be a single datatype or a mix of different datatypes; in fact, we can add an array inside another array. 
+        const mrArr2 = [2, 'Samuel', 9, 2, true, {name: 'Daniel', age: 20}];
+
+### Array methods
+There are a couple of methods we can use on an array, here are a few of these methods:
+    - .length : This checks the lenght of the named array e.g 
+        myArr.length
+    - .splice: this deletes element(s) of an array. it takes two argument to perform the operation, the first being the index we want to start the deletion from, and the other argument is how many elements we want to delete. For example, suppose we want to delete 2 elements from our array (myArr) from the zeroth index, then we'll say:
+        myArr.splice(0, 2);
+    This will delete the first 2 elements. if we want to delete just 1 we just need to change the 2 to 1.
+    - .push: This add a new element to the end of the array. the syntax is pretty straight forward as folows:
+        myArr.push(60)
+    This will add 60 to the end of our array as a member of the array.
+
+One extra thing to note is that arrays are soemtimes confused in javascript as an object, which means an object can sometimes be confused as an array. to be explicitly sure you're dealing with an array, we use the special array method "Array.isArray" This method uses the array function to check if the given values or variable is truely an array. it will return true if it is an array and false otherwise. e.g:
+    Array.isArray(myArr); or Array.isArray([1, 8, 44]);
+
+## Loops
+In the case of a loop, a loop run a particular body of code repeatedly until its condition becomes false. A loop in javascript follows the syntax:
+    while(condtions){
+        run this;
+        increment until condtions is false;
+    }
+e.g:
+    let i = 0;
+    while(i <= 3){
+        console.log(i);
+        i += 1;
+    }
+this will keep running until i becomes 3 then terminates.
+
+Interesting addition is that, loops in javascript works almost exactly like in C. So, if you undeerstand looping in C, just try out what you know and you might be surprised it works perfectly.
+
+footnote: to generate a random number, we use math.random(). e.g
+    let randomNumber = math.random();
+    

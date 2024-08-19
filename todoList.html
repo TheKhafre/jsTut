@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+</head>
+
+<body>
+    <p>My ToDo List</p>
+    <Input placeholder="Write Task Here" class="jsInput todoInput" onkeydown="
+        keydownHandler(event);
+    ">
+    <button onclick="
+            addTodo();
+        ">Add</button>
+
+    <script>
+        // Create the HTML files(p text, input, and button)
+        // create an empty array to hold the response
+        // get the value from the input box
+        // save the value in the array created
+        // log the array in the console
+        // put everythin in a function
+        // call the function in the button
+
+        const todolist = []; // the empty array will hold the response
+
+        function addTodo() {
+            const myInput = document.querySelector('.jsInput');
+            const textBox = myInput.value;
+
+            todolist.push(textBox);
+            console.log(todolist)
+
+            // this clears the input field when we add the new todo
+            // we change the value of the input field to an empty string
+            myInput.value = '';
+        }
+
+            // this add the todo when we click enter
+        function keydownHandler(event) {
+            if (event.key === 'Enter') {
+                addTodo();
+            }
+        }
+    </script>
+</body>
+
+</html>
